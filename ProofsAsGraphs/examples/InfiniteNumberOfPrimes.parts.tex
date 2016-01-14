@@ -1,0 +1,120 @@
+\documentclass{article}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+% \begin{tikzpicture}[anchor=mid,>=latex',line join=bevel,]
+\begin{tikzpicture}[>=latex',line join=bevel,]
+  \pgfsetlinewidth{1bp}
+%%
+\pgfsetcolor{black}
+  % Edge: decoy1 -- construction
+  \pgfsetcolor{white}
+  \draw [] (336.0bp,377.83bp) .. controls (336.0bp,367.0bp) and (336.0bp,353.29bp)  .. (336.0bp,342.41bp);
+  % Edge: q_is_prime -- assumption
+  \draw [] (237.0bp,143.83bp) .. controls (237.0bp,133.0bp) and (237.0bp,119.29bp)  .. (237.0bp,108.41bp);
+  % Edge: contradiction -- no_dividers
+  \draw [] (143.0bp,305.62bp) .. controls (143.0bp,292.27bp) and (143.0bp,274.3bp)  .. (143.0bp,261.03bp);
+  % Edge: decoy1 -- contradiction
+  \draw [] (287.3bp,377.83bp) .. controls (257.93bp,366.88bp) and (220.66bp,352.97bp)  .. (191.35bp,342.04bp);
+  % Edge: QED -- q_is_prime
+  \draw [] (303.81bp,219.57bp) .. controls (289.28bp,207.05bp) and (271.66bp,191.86bp)  .. (258.16bp,180.23bp);
+  % Edge: decoy1 -- decoy2
+  \draw [] (368.05bp,377.83bp) .. controls (387.3bp,366.92bp) and (411.71bp,353.08bp)  .. (430.96bp,342.16bp);
+  % Edge: no_dividers -- q_is_prime
+  \draw [] (164.33bp,224.62bp) .. controls (179.82bp,211.27bp) and (200.68bp,193.3bp)  .. (216.08bp,180.03bp);
+  % Edge: assumption -- PBC
+  \draw [] (237.0bp,71.831bp) .. controls (237.0bp,61.0bp) and (237.0bp,47.288bp)  .. (237.0bp,36.413bp);
+  % Node: decoy1
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (388.0bp,414.0bp) -- (284.0bp,414.0bp) -- (284.0bp,378.0bp) -- (388.0bp,378.0bp) -- cycle;
+  \draw (336.0bp,396.0bp) node {\mbox{Define $q=\prod_{i=1}^n p_i$}};
+\end{scope}
+  % Node: QED
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (358.0bp,270.0bp) -- (304.0bp,270.0bp) -- (304.0bp,216.0bp) -- (358.0bp,216.0bp) -- cycle;
+  \draw (316.0bp,270.0bp) -- (304.0bp,258.0bp);
+  \draw (304.0bp,228.0bp) -- (316.0bp,216.0bp);
+  \draw (346.0bp,216.0bp) -- (358.0bp,228.0bp);
+  \draw (358.0bp,258.0bp) -- (346.0bp,270.0bp);
+  \draw (331.0bp,243.0bp) node {QED};
+\end{scope}
+  % Node: q_is_prime
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (342.0bp,180.0bp) -- (132.0bp,180.0bp) -- (132.0bp,144.0bp) -- (342.0bp,144.0bp) -- cycle;
+  \draw (237.0bp,162.0bp) node {\mbox{$q$ has no prime dividers, therefor $q$ is prime}};
+\end{scope}
+  % Node: decoy2
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (512.0bp,342.0bp) -- (414.0bp,342.0bp) -- (414.0bp,306.0bp) -- (512.0bp,306.0bp) -- cycle;
+  \draw (463.0bp,324.0bp) node {\mbox{Define $q=p_n+1$}};
+\end{scope}
+  % Node: assumption
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (409.0bp,108.0bp) -- (65.0bp,108.0bp) -- (65.0bp,72.0bp) -- (409.0bp,72.0bp) -- cycle;
+  \draw (237.0bp,90.0bp) node {\mbox{The set of primes can be written as $\{p_1<p_2<\ldots<p_n\}$ for some $n<\infty$}};
+\end{scope}
+  % Node: contradiction
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (258.0bp,342.0bp) -- (28.0bp,342.0bp) -- (28.0bp,306.0bp) -- (258.0bp,306.0bp) -- cycle;
+  \draw (143.0bp,324.0bp) node {\mbox{There is a prime outside the set $\{p_1,p_2,\ldots,p_n\}$}};
+\end{scope}
+  % Node: PBC
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (297.0bp,36.0bp) -- (177.0bp,36.0bp) -- (177.0bp,0.0bp) -- (297.0bp,0.0bp) -- cycle;
+  \draw (237.0bp,18.0bp) node {Proof by contradiction};
+\end{scope}
+  % Node: no_dividers
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (286.0bp,261.0bp) -- (0.0bp,261.0bp) -- (0.0bp,225.0bp) -- (286.0bp,225.0bp) -- cycle;
+  \draw (143.0bp,243.0bp) node {\mbox{The remainder from dividing $q$ by $p_i$ (for any $1\leq i \leq n$) is 1}};
+\end{scope}
+  % Node: construction
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (396.0bp,342.0bp) -- (276.0bp,342.0bp) -- (276.0bp,306.0bp) -- (396.0bp,306.0bp) -- cycle;
+  \draw (336.0bp,324.0bp) node {\mbox{Define $q=\prod_{i=1}^n p_i+1$}};
+\end{scope}
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+
+

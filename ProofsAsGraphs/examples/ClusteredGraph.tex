@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+% \begin{tikzpicture}[anchor=mid,>=latex',line join=bevel,]
+\begin{tikzpicture}[>=latex',line join=bevel,]
+  \pgfsetlinewidth{1bp}
+%%
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (64.0bp,152.0bp) -- (64.0bp,348.0bp) -- (206.0bp,348.0bp) -- (206.0bp,152.0bp) -- cycle;
+\end{scope}
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (64.0bp,8.0bp) -- (64.0bp,132.0bp) -- (206.0bp,132.0bp) -- (206.0bp,8.0bp) -- cycle;
+\end{scope}
+  \pgfsetcolor{black}
+  % Edge: d -> h
+  \draw [->] (83.731bp,162.73bp) .. controls (73.803bp,152.8bp) and (60.685bp,139.68bp)  .. (42.247bp,121.25bp);
+  % Edge: e -> f
+  \draw [->] (99.0bp,87.831bp) .. controls (99.0bp,80.131bp) and (99.0bp,70.974bp)  .. (99.0bp,52.413bp);
+  % Edge: c -> g
+  \draw [->] (171.0bp,152.4bp) .. controls (171.0bp,149.03bp) and (171.0bp,145.64bp)  .. (171.0bp,131.97bp);
+  % Edge: e -> g
+  \draw [->] (114.27bp,90.731bp) .. controls (124.2bp,80.803bp) and (137.32bp,67.685bp)  .. (155.75bp,49.247bp);
+  % Edge: c -> e
+  \draw [->] (135.0bp,152.0bp) .. controls (130.77bp,144.4bp) and (125.33bp,136.73bp)  .. (113.32bp,121.73bp);
+  % Edge: d -> e
+  \draw [->] (99.0bp,159.83bp) .. controls (99.0bp,152.13bp) and (99.0bp,142.97bp)  .. (99.0bp,124.41bp);
+  % Edge: a -> c
+  \draw [->] (143.71bp,304.57bp) .. controls (147.96bp,296.08bp) and (153.15bp,285.69bp)  .. (162.37bp,267.27bp);
+  % Edge: b -> f
+  \draw [->] (113.12bp,234.28bp) .. controls (121.25bp,224.15bp) and (130.69bp,210.23bp)  .. (135.0bp,196.0bp) .. controls (141.95bp,173.04bp) and (145.43bp,157.52bp)  .. (144.93bp,131.74bp);
+  % Edge: a -> b
+  \draw [->] (126.29bp,304.57bp) .. controls (122.04bp,296.08bp) and (116.85bp,285.69bp)  .. (107.63bp,267.27bp);
+  % Edge: c -> d
+  \draw [->] (155.73bp,234.73bp) .. controls (145.8bp,224.8bp) and (132.68bp,211.68bp)  .. (114.25bp,193.25bp);
+  % Edge: b -> d
+  \draw [->] (99.0bp,231.83bp) .. controls (99.0bp,224.13bp) and (99.0bp,214.97bp)  .. (99.0bp,196.41bp);
+  % Node: a
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (135.0bp,322.0bp) ellipse (29.0bp and 18.0bp);
+  \draw (135.0bp,322.0bp) node {this is A};
+\end{scope}
+  % Node: c
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (171.0bp,250.0bp) ellipse (27.0bp and 18.0bp);
+  \draw (171.0bp,250.0bp) node {c};
+\end{scope}
+  % Node: b
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (99.0bp,250.0bp) ellipse (27.0bp and 18.0bp);
+  \draw (99.0bp,250.0bp) node {crazy};
+\end{scope}
+  % Node: e
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (99.0bp,106.0bp) ellipse (27.0bp and 18.0bp);
+  \draw (99.0bp,106.0bp) node {e};
+\end{scope}
+  % Node: d
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (99.0bp,178.0bp) ellipse (27.0bp and 18.0bp);
+  \draw (99.0bp,178.0bp) node {d};
+\end{scope}
+  % Node: g
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (171.0bp,34.0bp) ellipse (27.0bp and 18.0bp);
+  \draw (171.0bp,34.0bp) node {g};
+\end{scope}
+  % Node: f
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (99.0bp,34.0bp) ellipse (27.0bp and 18.0bp);
+  \draw (99.0bp,34.0bp) node {f};
+\end{scope}
+  % Node: h
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (27.0bp,106.0bp) ellipse (27.0bp and 18.0bp);
+  \draw (27.0bp,106.0bp) node {h};
+\end{scope}
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+
+

@@ -1,0 +1,47 @@
+digraph Dependencies {
+	size="1.0,1.0";
+	ratio=compress;
+	rankdir=LR;
+	
+	
+	subgraph cluster1 {
+		label="Sets";
+		node [shape=box,texmode=verbatim];
+
+		//definition->ProductSets;
+		definition ->explicit;
+		definition ->conditional;
+		//definition -> notation;
+		explicit [texlbl="Enumeration: $A=\{x_1,x_2,\ldots,x_n\} $"];
+		conditional [texlbl="\mbox{Conditional definition: $B=\{i \in N | \exists j \in N, s.t. j=2i\}$}"];
+		notation [texlbl="Notation: $x \in A, A \cup B, A \cap B, A^c$"];
+		ProductSets[texlbl="product sets and power sets: $A \times B, \{0,1\}^{10}$"];
+		CountablyInfiniteSets -> UncountablyInfiniteSets;
+	}
+
+	subgraph cluster0 {
+		label="Combinaorics"
+		node [shape=box,texmode=verbatim];
+
+		prodSetSize[label="Size of product sets"];
+		ProductSets -> prodSetSize;
+		Factorial;
+		Permutation;
+		Combination;
+		prodSetSize -> Factorial ->Permutation -> Combination;
+	}
+	
+	subgraph clusterDistributions {
+		label="Distributions";
+		unifFinite [label="Uniform distributions over finite sets"];
+		NonUnifFinite [label="Non-Uniform distributions over finite sets"];
+		CountablyInfinite [label="Distributions over countably infinite sets"];
+		UncountablyInfinite [label="Density distributions"];
+	}
+	subgraph clusterRandomVariables {
+		label="Random Variables";
+	}
+}
+
+		
+		

@@ -1,0 +1,1 @@
+dot2tex --autosize InfiniteNumberOfPrimes.dot > InfiniteNumberOfPrimes.tex; pdflatex InfiniteNumberOfPrimes.tex ; open InfiniteNumberOfPrimes.pdf

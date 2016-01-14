@@ -1,0 +1,18 @@
+graph components {
+	fontsize=10;
+	decoy1 -- contradiction -- no_dividers -- q_is_prime -- assumption -- PBC[color=white];
+	decoy1 -> construction[color=white];
+	decoy1 -> decoy2[color=white];
+	QED -- q_is_prime [color=white];
+	
+	assumption [shape=box,texlbl="\mbox{The set of primes can be written as $\{p_1<p_2<\ldots<p_n\}$ for some $n<\infty$}"];
+	construction [shape=box,texlbl="\mbox{Define $q=\prod_{i=1}^n p_i+1$}"]
+	decoy1 [shape=box,texlbl="\mbox{Define $q=\prod_{i=1}^n p_i$}"]
+	decoy2 [shape=box,texlbl="\mbox{Define $q=p_n+1$}"]
+	no_dividers [shape=box,texlbl="\mbox{The remainder from dividing $q$ by $p_i$ (for any $1\leq i \leq n$) is 1}"]
+	q_is_prime [shape=box,texlbl="\mbox{$q$ has no prime dividers, therefor $q$ is prime}"]
+	contradiction [shape=box,texlbl="\mbox{There is a prime outside the set $\{p_1,p_2,\ldots,p_n\}$}"];
+	PBC [shape=box,label="Proof by contradiction"];
+	QED [shape=Msquare];
+	
+}

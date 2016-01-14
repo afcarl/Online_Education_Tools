@@ -1,0 +1,112 @@
+\documentclass{article}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+\enlargethispage{100cm}
+% Start of code
+% \begin{tikzpicture}[anchor=mid,>=latex',line join=bevel,]
+\begin{tikzpicture}[>=latex',line join=bevel,]
+  \pgfsetlinewidth{1bp}
+%%
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (8.0bp,82.0bp) -- (8.0bp,458.0bp) -- (368.0bp,458.0bp) -- (368.0bp,82.0bp) -- cycle;
+  \draw (185.0bp,435.0bp) node {Proof by Contradiction};
+\end{scope}
+  \pgfsetcolor{black}
+  % Edge: assumption -> construction
+  \draw [->] (188.0bp,377.83bp) .. controls (188.0bp,370.13bp) and (188.0bp,360.97bp)  .. (188.0bp,342.41bp);
+  % Edge: contradiction -> QED
+  \draw [->] (188.0bp,82.196bp) .. controls (188.0bp,76.511bp) and (188.0bp,70.38bp)  .. (188.0bp,54.225bp);
+  % Edge: goal -> assumption
+  \draw [->] (188.0bp,465.77bp) .. controls (188.0bp,465.6bp) and (188.0bp,465.44bp)  .. (188.0bp,457.66bp);
+  % Edge: construction -> no_dividers
+  \draw [->] (188.0bp,305.83bp) .. controls (188.0bp,298.13bp) and (188.0bp,288.97bp)  .. (188.0bp,270.41bp);
+  % Edge: no_dividers -> q_is_prime
+  \draw [->] (188.0bp,233.83bp) .. controls (188.0bp,226.13bp) and (188.0bp,216.97bp)  .. (188.0bp,198.41bp);
+  % Edge: q_is_prime -> contradiction
+  \draw [->] (188.0bp,161.83bp) .. controls (188.0bp,154.13bp) and (188.0bp,144.97bp)  .. (188.0bp,126.41bp);
+  % Node: goal
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,1.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (300.0bp,510.0bp) -- (76.0bp,510.0bp) -- (76.0bp,474.0bp) -- (300.0bp,474.0bp) -- cycle;
+  \draw (304.0bp,514.0bp) -- (72.0bp,514.0bp) -- (72.0bp,470.0bp) -- (304.0bp,470.0bp) -- cycle;
+  \draw (308.0bp,518.0bp) -- (68.0bp,518.0bp) -- (68.0bp,466.0bp) -- (308.0bp,466.0bp) -- cycle;
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (188.0bp,492.0bp) node {Prove that the set of prime numbers is infinite};
+\end{scope}
+  % Node: contradiction
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (303.0bp,126.0bp) -- (73.0bp,126.0bp) -- (73.0bp,90.0bp) -- (303.0bp,90.0bp) -- cycle;
+  \draw (188.0bp,108.0bp) node {\mbox{There is a prime outside the set $\{p_1,p_2,\ldots,p_n\}$}};
+\end{scope}
+  % Node: assumption
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (360.0bp,414.0bp) -- (16.0bp,414.0bp) -- (16.0bp,378.0bp) -- (360.0bp,378.0bp) -- cycle;
+  \draw (188.0bp,396.0bp) node {\mbox{The set of primes can be written as $\{p_1<p_2<\ldots<p_n\}$ for some $n<\infty$}};
+\end{scope}
+  % Node: construction
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (248.0bp,342.0bp) -- (128.0bp,342.0bp) -- (128.0bp,306.0bp) -- (248.0bp,306.0bp) -- cycle;
+  \draw (188.0bp,324.0bp) node {\mbox{Define $q=\prod_{i=1}^n p_i+1$}};
+\end{scope}
+  % Node: q_is_prime
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (293.0bp,198.0bp) -- (83.0bp,198.0bp) -- (83.0bp,162.0bp) -- (293.0bp,162.0bp) -- cycle;
+  \draw (188.0bp,180.0bp) node {\mbox{$q$ has no prime dividers, therefor $q$ is prime}};
+\end{scope}
+  % Node: no_dividers
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (333.0bp,270.0bp) -- (43.0bp,270.0bp) -- (43.0bp,234.0bp) -- (333.0bp,234.0bp) -- cycle;
+  \draw (188.0bp,252.0bp) node {\mbox{The remaineder from dividing $q$ by $p_i$ (for any $1\leq i \leq n$) is 1}};
+\end{scope}
+  % Node: QED
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (215.0bp,54.0bp) -- (161.0bp,54.0bp) -- (161.0bp,0.0bp) -- (215.0bp,0.0bp) -- cycle;
+  \draw (173.0bp,54.0bp) -- (161.0bp,42.0bp);
+  \draw (161.0bp,12.0bp) -- (173.0bp,0.0bp);
+  \draw (203.0bp,0.0bp) -- (215.0bp,12.0bp);
+  \draw (215.0bp,42.0bp) -- (203.0bp,54.0bp);
+  \draw (188.0bp,27.0bp) node {QED};
+\end{scope}
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+
+

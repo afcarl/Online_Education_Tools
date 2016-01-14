@@ -1,0 +1,32 @@
+Piotr Mitros 	
+
+Jan 7 (13 hours ago)
+
+
+Not many experiments in this area. 
+
+It'd be comparatively easy to build a new XBlock which would support such navigation. Look up XBlocks documentation, and going a little beyond the docs, create one with child XBlocks, and it will do what you want. The system is architected to make things like this relatively easy. 
+
+You may need to author courses in OLX to do this. Studio support for other structures is a little bit limited. That's pretty easy to do, though. See edX-insider for an example of a well-structured OLX course. 
+
+Be aware that a lot of this can also be done without much technology support, beyond a little UX, by telling students what to do. In many cases, guided self-regulation is more effective than fully automated solutions. I designed the platform largely around that paradigm. 
+
+Piotr
+- hide quoted text -
+
+
+On Thursday, January 7, 2016 at 12:40:59 AM UTC-5, Yoav Freund wrote:
+Hi,
+
+I am interested in extending the course outline so that instead of being purely linear it can be organized as a directed graph. This way instead of requiring all students to do all of the sections, a student can start in the middle and progress as long as they have the prior knowledge required for he exercises. On the other hand, if they are having difficulty that is due to missing pre-requisite knowledge, they will directed to the
+section from which they can acquire that knowledge.
+
+I wonder:
+1. Whether something like this has already been tried by somebody?
+2.  If my students and I want to extend open-edx in that way, what is the relevant code modules that we need to extend?
+
+Thanks in advance for any pointers!
+
+Thanks
+Yoav Freund
+UCSD/CSE

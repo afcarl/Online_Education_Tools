@@ -1,0 +1,175 @@
+\documentclass{standalone}
+\usepackage[x11names, rgb]{xcolor}
+\usepackage[utf8]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{snakes,arrows,shapes}
+\usepackage{amsmath}
+%
+%
+
+%
+
+%
+
+\begin{document}
+\pagestyle{empty}
+%
+%
+%
+
+% Start of code
+% \begin{tikzpicture}[anchor=mid,>=latex',line join=bevel,]
+\begin{tikzpicture}[>=latex',line join=bevel,]
+  \pgfsetlinewidth{1bp}
+%%
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (8.0bp,102.0bp) -- (8.0bp,350.0bp) -- (536.0bp,350.0bp) -- (536.0bp,102.0bp) -- cycle;
+  \draw (270.0bp,328.0bp) node {Sets};
+\end{scope}
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (336.0bp,8.0bp) -- (336.0bp,94.0bp) -- (864.0bp,94.0bp) -- (864.0bp,8.0bp) -- cycle;
+  \draw (597.0bp,72.0bp) node {Combinaorics};
+\end{scope}
+\begin{scope}
+  \pgfsetstrokecolor{black}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (14.0bp,358.0bp) -- (14.0bp,606.0bp) -- (234.0bp,606.0bp) -- (234.0bp,358.0bp) -- cycle;
+  \draw (121.0bp,584.0bp) node {Distributions};
+\end{scope}
+  \pgfsetcolor{black}
+  % Edge: definition -> explicit
+  \draw [->] (155.7bp,290.0bp) .. controls (190.96bp,290.0bp) and (249.66bp,290.0bp)  .. (310.49bp,290.0bp);
+  % Edge: Factorial -> Permutation
+  \draw [->] (625.66bp,34.0bp) .. controls (634.01bp,34.0bp) and (643.27bp,34.0bp)  .. (662.48bp,34.0bp);
+  % Edge: ProductSets -> prodSetSize
+  \draw [->] (176.51bp,109.99bp) .. controls (221.86bp,94.427bp) and (287.49bp,71.911bp)  .. (345.21bp,52.112bp);
+  % Edge: CountablyInfiniteSets -> UncountablyInfiniteSets
+  \draw [->] (182.78bp,182.0bp) .. controls (224.06bp,182.0bp) and (279.6bp,182.0bp)  .. (334.06bp,182.0bp);
+  % Edge: Permutation -> Combination
+  \draw [->] (739.61bp,34.0bp) .. controls (748.06bp,34.0bp) and (757.11bp,34.0bp)  .. (776.11bp,34.0bp);
+  % Edge: definition -> conditional
+  \draw [->] (155.7bp,283.75bp) .. controls (190.1bp,276.97bp) and (246.81bp,265.8bp)  .. (306.61bp,254.01bp);
+  % Edge: prodSetSize -> Factorial
+  \draw [->] (452.09bp,34.0bp) .. controls (484.25bp,34.0bp) and (524.4bp,34.0bp)  .. (564.31bp,34.0bp);
+  % Node: definition
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (155.0bp,308.0bp) -- (93.0bp,308.0bp) -- (93.0bp,272.0bp) -- (155.0bp,272.0bp) -- cycle;
+  \draw (124.0bp,290.0bp) node {definition};
+\end{scope}
+  % Node: prodSetSize
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (452.0bp,52.0bp) -- (344.0bp,52.0bp) -- (344.0bp,16.0bp) -- (452.0bp,16.0bp) -- cycle;
+  \draw (398.0bp,34.0bp) node {Size of product sets};
+\end{scope}
+  % Node: notation
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (209.0bp,254.0bp) -- (39.0bp,254.0bp) -- (39.0bp,218.0bp) -- (209.0bp,218.0bp) -- cycle;
+  \draw (124.0bp,236.0bp) node {Notation: $x \in A, A \cup B, A \cap B, A^c$};
+\end{scope}
+  % Node: NonUnifFinite
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (124.0bp,492.0bp) ellipse (102.0bp and 18.0bp);
+  \draw (124.0bp,492.0bp) node {Non-Uniform distributions over finite sets};
+\end{scope}
+  % Node: Factorial
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (625.0bp,52.0bp) -- (565.0bp,52.0bp) -- (565.0bp,16.0bp) -- (625.0bp,16.0bp) -- cycle;
+  \draw (595.0bp,34.0bp) node {Factorial};
+\end{scope}
+  % Node: conditional
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (527.0bp,254.0bp) -- (269.0bp,254.0bp) -- (269.0bp,218.0bp) -- (527.0bp,218.0bp) -- cycle;
+  \draw (398.0bp,236.0bp) node {\mbox{Conditional definition: $B=\{i \in N | \exists j \in N, s.t. j=2i\}$}};
+\end{scope}
+  % Node: explicit
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (485.0bp,308.0bp) -- (311.0bp,308.0bp) -- (311.0bp,272.0bp) -- (485.0bp,272.0bp) -- cycle;
+  \draw (398.0bp,290.0bp) node {Enumeration: $A=\{x_1,x_2,\ldots,x_n\} $};
+\end{scope}
+  % Node: ProductSets
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (232.0bp,146.0bp) -- (16.0bp,146.0bp) -- (16.0bp,110.0bp) -- (232.0bp,110.0bp) -- cycle;
+  \draw (124.0bp,128.0bp) node {product sets and power sets: $A \times B, \{0,1\}^{10}$};
+\end{scope}
+  % Node: CountablyInfiniteSets
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (182.0bp,200.0bp) -- (66.0bp,200.0bp) -- (66.0bp,164.0bp) -- (182.0bp,164.0bp) -- cycle;
+  \draw (124.0bp,182.0bp) node {CountablyInfiniteSets};
+\end{scope}
+  % Node: Combination
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (855.0bp,52.0bp) -- (777.0bp,52.0bp) -- (777.0bp,16.0bp) -- (855.0bp,16.0bp) -- cycle;
+  \draw (816.0bp,34.0bp) node {Combination};
+\end{scope}
+  % Node: UncountablyInfinite
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (124.0bp,384.0bp) ellipse (57.0bp and 18.0bp);
+  \draw (124.0bp,384.0bp) node {Density distributions};
+\end{scope}
+  % Node: Permutation
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (739.0bp,52.0bp) -- (663.0bp,52.0bp) -- (663.0bp,16.0bp) -- (739.0bp,16.0bp) -- cycle;
+  \draw (701.0bp,34.0bp) node {Permutation};
+\end{scope}
+  % Node: CountablyInfinite
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (124.0bp,438.0bp) ellipse (100.0bp and 18.0bp);
+  \draw (124.0bp,438.0bp) node {Distributions over countably infinite sets};
+\end{scope}
+  % Node: UncountablyInfiniteSets
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (461.0bp,200.0bp) -- (335.0bp,200.0bp) -- (335.0bp,164.0bp) -- (461.0bp,164.0bp) -- cycle;
+  \draw (398.0bp,182.0bp) node {UncountablyInfiniteSets};
+\end{scope}
+  % Node: unifFinite
+\begin{scope}
+  \definecolor{strokecol}{rgb}{0.0,0.0,0.0};
+  \pgfsetstrokecolor{strokecol}
+  \draw (124.0bp,546.0bp) ellipse (91.0bp and 18.0bp);
+  \draw (124.0bp,546.0bp) node {Uniform distributions over finite sets};
+\end{scope}
+%
+\end{tikzpicture}
+% End of code
+
+%
+\end{document}
+%
+
+
+
