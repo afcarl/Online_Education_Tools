@@ -1,6 +1,8 @@
 # Online_Education_Tools
 ------------------------------
 
+* **TODO**: add pointers to the other GitHub Repositories.
+
 ### Phase One - Setup edX
 * Setup local testing environment (Devstack)
 * Create courses on edX (write step by step documentation)
