@@ -1,7 +1,9 @@
 # Online_Education_Tools
 ------------------------------
 
-* **TODO**: add pointers to the other GitHub Repositories.
+Team Frontend(Zhen, Qian, Yunhan, Weichen) [Github Link](https://github.com/zhenzhai/CSE103_edX)
+
+Team Backend(Joe, Noah, Dhruhin) [Github](https://github.com/joemanley201/blockly_proofs)
 
 ### Phase One - Setup edX
 * Setup local testing environment (Devstack)
